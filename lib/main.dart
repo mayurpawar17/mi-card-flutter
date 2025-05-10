@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal[500],
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
-                backgroundColor: Colors.amber,
                 backgroundImage: AssetImage('images/profile.png'),
               ),
               Text(
@@ -39,8 +39,26 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                 ),
               ),
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(color: Colors.white)),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                child: ListTile(
+                  leading: Icon(Icons.phone, size: 20, color: Colors.teal),
+                  title: Text("9xx618xxxx"),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                child: ListTile(
+                  leading: Icon(Icons.email, size: 20, color: Colors.teal),
+                  title: Text("mayurpawar4908@gmail.com"),
+                ),
+              ),
             ],
-          )
+          ),
         ),
       ),
     );
